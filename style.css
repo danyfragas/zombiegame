@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game {
+    width: 100vw;
+    height: 100vh;
+    border-bottom: 50px solid rgb(54, 51, 51);
+    margin: 0 auto; /*centralizar a div*/
+    position: relative;
+    overflow: hidden; /*elementos que saírem da delimitação do quadro, n irão aparecer*/
+    background: linear-gradient(#343333, #0a0a0a);
+}
+
+.bk{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.zombie {
+    position: absolute;
+    bottom: 0;
+    width: 180px;  
+    /*fazendo com que os elementos ande junto com o quadro*/
+    animation: zombie-animation 1.5s infinite linear; /*duração da animação*/
+}
+
+
+.girl{
+    position: absolute;
+    width: 150px;
+    bottom: 0px;
+}
+
+/*função para o mario pular quando for necessário*/
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+/*zombie-animation*/
+@keyframes zombie-animation {
+    /*condicionais*/
+    from{
+        right: -80px;
+    }to{
+        right: 100%;
+    }
+}
+
+/*gril-animation-jump*/
+@keyframes jump {
+    /*condicionais para o pulo*/
+    0%{
+        bottom: 0px;
+    }
+    40%{
+        bottom: 45%;
+    }
+    50%{
+        bottom: 45%;
+    }
+    60%{
+        bottom: 45%;
+    }
+    100%{
+        bottom: 0%;
+    }
+}
+
